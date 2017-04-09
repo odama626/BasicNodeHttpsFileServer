@@ -9,6 +9,4 @@ var app = express();
 app.use(compression());
 app.use(express.static('files'));
 
-console.log(cert);
-
-var server = https.createServer(cert, app).listen(port, _ => console.log('listening on port ${port}'));
+var server = https.createServer(cert, app).listen(port, _ => console.log(`listening on port ${port}`));
